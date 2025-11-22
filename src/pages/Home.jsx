@@ -7,6 +7,7 @@ import RickAndMortyLogo from "../assets/Rick_and_Morty.png";
 import FavoriteSection from "../components/FavoriteSection";
 import Pagination from "../components/Pagination";
 import RmError from "../assets/RM-ErrorImage.png";
+import FavoriteButton from "../components/FavoriteButton";
 
 const Home = () => {
   // Declaramos un objeto conformado del estado y del método utilizado en AppContext para la obtención de información
@@ -31,16 +32,10 @@ const Home = () => {
         />
       </div>
 
-      <SearchBar />
+      <div className="flex justify-between items-center">
+        <SearchBar />
 
-      <div className="flex justify-center items-center mt-5 mb-5">
-        <button
-          onClick={() => openFavorite()}
-          type="submit"
-          className="px-4 py-2 bg-amber-300 text-black rounded cursor-pointer"
-        >
-          Favoritos
-        </button>
+        <FavoriteButton />
       </div>
 
       {/* Manejo del error de la barra de busqueda*/}
