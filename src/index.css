@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+body {
+  background-image: url("./assets/bg-rick-and-morty.png");
+}
